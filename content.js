@@ -100,7 +100,7 @@ const CONTENT = {
 
   // Add a photo by dropping a file in /photos/ and adding a line here.
   photos: [
-    { src: "photos/photo_5361537774911171320_y", caption: "Aleksandra Gudkova" },
+    { src: "photos/photo_5361537774911171320_y.jpg", caption: "Aleksandra Gudkova" },
     { src: "photos/placeholder-2.svg", caption: "replace me — photos/placeholder-2.svg" },
     { src: "photos/placeholder-3.svg", caption: "replace me — photos/placeholder-3.svg" },
     { src: "photos/placeholder-4.svg", caption: "replace me — photos/placeholder-4.svg" },
