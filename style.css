@@ -52,13 +52,13 @@ body {
   justify-content: center;
   color: var(--ink-dim);
   opacity: 0.05;
-  transition: opacity 2.6s ease, color 1.6s ease;
+  transition: opacity 2.6s ease, color 2.6s ease;
 }
 
 .ascii-field .cell.active {
   color: var(--ink);
   opacity: 1;
-  transition: opacity 1.12s ease, color 0.12s ease;
+  transition: opacity 1.12s ease, color 1.12s ease;
 }
 
 .scanlines {
