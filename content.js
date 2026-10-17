@@ -3,15 +3,6 @@
    photo by adding an entry to the matching array below — the
    pages render these automatically, no HTML editing needed.
    ========================================================= */
-R5 (live set, 2026)
-chao (live set, 2026)
-must have been the wind (live set, 2026)
-hand tracking improvisation (live set, 2026)
-Luftschloss (live set / fixed-media, 2026)
-branching (live set, 2026)
-CO3 (live set, 2026)
-time has ticks (fixed media, 2026)
-NRPS (live set, 2025)
 
 const CONTENT = {
   projects: [
