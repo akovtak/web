@@ -30,7 +30,7 @@ function buildGrid() {
   field.style.setProperty('--cols', cols);
   field.style.gridTemplateColumns = `repeat(${cols}, ${CELL}px)`;
   field.style.gridAutoRows = `${CELL}px`;
-  field.style.fontSize = `${Math.round(CELL * 0.6)}px`;
+  field.style.fontSize = `${Math.round(CELL * 0.3)}px`;
   field.style.lineHeight = `${CELL}px`;
 
   field.innerHTML = '';
