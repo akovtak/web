@@ -9,9 +9,9 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
    ========================================================= */
 
 const field = document.getElementById('asciiField');
-const GLITCH_CHARS = '@#%&$*+=-:.?/\\|(){}[]<>01';
+const GLITCH_CHARS = '@#%&$*+=-:.?/\\|(){}[]<>01❤︎★✿';
 const IDLE_CHAR = '·';
-const CELL = 20; // px, square-ish grid cell
+const CELL = 25; // px, square-ish grid cell
 
 let cols = 0;
 let rows = 0;
@@ -74,7 +74,7 @@ function excite(index) {
   cell.timers.push(setTimeout(() => { cell.el.textContent = randomChar(); }, 95));
   cell.timers.push(setTimeout(() => {
     cell.el.classList.remove('active');
-  }, 260 + Math.random() * 220));
+  }, 360 + Math.random() * 220));
 }
 
 function excitePointer(clientX, clientY) {
