@@ -11,7 +11,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const field = document.getElementById('asciiField');
 const GLITCH_CHARS = '@#%&$*+=-:.?/\\|(){}[]<>01❤︎★✿';
 const IDLE_CHAR = '·';
-const CELL = 20; // px, square-ish grid cell
+const CELL = 25; // px, square-ish grid cell
 
 let cols = 0;
 let rows = 0;
