@@ -7,9 +7,10 @@
   --line: rgba(255, 255, 255, 0.14);
   --header-h: 3rem;
 
-  --font-display: 'JetBrains Mono', monospace;
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-body: 'IBM Plex Mono', monospace;
+  --font-display: 'Inconsolata', monospace;
+  --font-mono: 'Inconsolata', monospace;
+  /* --font-body: 'IBM Plex Mono', monospace; */
+  --font-body: 'Inconsolata', monospace;
 }
 
 * { box-sizing: border-box; }
@@ -42,7 +43,7 @@ body {
   overflow: hidden;
   font-family: var(--font-mono);
   user-select: none;
-  animation: flicker 7s infinite;
+  /* animation: flicker 7s infinite; */
 }
 
 .ascii-field .cell {
@@ -51,13 +52,13 @@ body {
   justify-content: center;
   color: var(--ink-dim);
   opacity: 0.05;
-  transition: opacity 1.6s ease, color 1.6s ease;
+  transition: opacity 2.6s ease, color 1.6s ease;
 }
 
 .ascii-field .cell.active {
   color: var(--ink);
   opacity: 1;
-  transition: opacity 0.12s ease, color 0.12s ease;
+  transition: opacity 1.12s ease, color 0.12s ease;
 }
 
 .scanlines {
@@ -98,7 +99,7 @@ body {
   pointer-events: none;
 }
 
-@keyframes flicker {
+/* @keyframes flicker {
   0%, 100% { filter: brightness(1); }
   92% { filter: brightness(1); }
   93% { filter: brightness(1.5) contrast(1.3); }
@@ -106,7 +107,7 @@ body {
   95% { filter: brightness(1); }
   96.5% { filter: brightness(1.35); }
   97% { filter: brightness(1); }
-}
+} */
 
 @media (prefers-reduced-motion: reduce) {
   .ascii-field { animation: none; }
@@ -214,15 +215,15 @@ button:focus-visible {
   opacity: 0.8;
 }
 
-.cursor-blink {
+/* .cursor-blink {
   display: inline-block;
   animation: blink 1s steps(1) infinite;
-}
+} */
 
-@keyframes blink {
+/* @keyframes blink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
-}
+} */
 
 .name {
   position: relative;
@@ -236,7 +237,7 @@ button:focus-visible {
 
 /* grayscale glitch text: two ghosted copies stutter behind the real text */
 
-.glitch-text {
+/* .glitch-text {
   isolation: isolate;
 }
 
@@ -309,7 +310,7 @@ button:focus-visible {
   color: var(--ink-dim);
   max-width: 36ch;
   margin: 0.75rem 0 0;
-}
+} */
 
 /* ---------- Page title (non-hero pages) ---------- */
 
