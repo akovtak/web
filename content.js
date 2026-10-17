@@ -107,6 +107,11 @@ const CONTENT = {
     { src: "photos/photo_5361537774911171939_y.jpg", caption: "hand tracker" },
     { src: "photos/photo_5361537774911171940_y.jpg", caption: "úúú" },
   ],
+
+  news: [
+    { date: "17/10/26", text: "Working on disgusting things, so excited, check this out!", link: "https://miro.com/app/board/uXjVEa6gOZ8=/?share_link_id=812543402876"},
+  ],
+   
 };
 
 /* ---------- render helpers (only run if the target exists on the page) ---------- */
@@ -173,8 +178,23 @@ function renderPhotos() {
     .join("");
 }
 
+function renderNews() {
+  const list = document.getElementById("newsList");
+  if (!list) return;
+  const limit = Number(list.dataset.limit) || CONTENT.news.length;
+  list.innerHTML = CONTENT.news.slice(0, limit).map((n) => `
+    <li class="news-item">
+      <span class="news-date">${n.date}</span>
+      <div>
+        <p class="news-title">${n.link ? `<a href="${n.link}" target="_blank" rel="noopener">${n.title}</a>` : n.title}</p>
+        ${n.text ? `<p class="news-text">${n.text}</p>` : ""}
+      </div>
+    </li>`).join("");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderEvents();
   renderPhotos();
+  renderNews();
 });
