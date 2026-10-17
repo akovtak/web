@@ -74,7 +74,7 @@ function excite(index) {
   cell.timers.push(setTimeout(() => { cell.el.textContent = randomChar(); }, 95));
   cell.timers.push(setTimeout(() => {
     cell.el.classList.remove('active');
-  }, 360 + Math.random() * 220));
+  }, 160 + Math.random() * 220));
 }
 
 function excitePointer(clientX, clientY) {
