@@ -109,7 +109,7 @@ const CONTENT = {
   ],
 
   news: [
-    { date: "17/10/26", text: "Working on disgusting things, so excited, check this out!", link: "https://miro.com/app/board/uXjVEa6gOZ8=/?share_link_id=812543402876"},
+    { text: 'Working on disgusting things, so excited, check <a href="https://miro.com/app/board/uXjVEa6gOZ8=/?share_link_id=397290439754" target="_blank" rel="noopener">this</a> out!', date: "17/10/26"},
   ],
    
 };
@@ -187,7 +187,7 @@ function renderNews() {
       <span class="news-date">${n.date}</span>
       <div>
         <p class="news-title">${n.link ? `<a href="${n.link}" target="_blank" rel="noopener">${n.title}</a>` : n.title}</p>
-        ${n.text ? `<p class="news-text">${n.text}</p>` : ""}
+        ${n.text ? `<p class="news-text">${n.link ? `<a ${p.link ? `href="${p.link}" target="_blank" rel="noopener"">${n.title}</a>` : n.title}</p>` : ""}
       </div>
     </li>`).join("");
 }
