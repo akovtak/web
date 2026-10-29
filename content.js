@@ -187,7 +187,7 @@ function renderNews() {
       <span class="news-date">${n.date}</span>
       <div>
         <p class="news-title">${n.link ? `<a href="${n.link}" target="_blank" rel="noopener">${n.title}</a>` : n.title}</p>
-        ${n.text ? `<p class="news-text">${n.link ? `<a ${p.link ? `href="${p.link}" target="_blank" rel="noopener"">${n.title}</a>` : n.title}</p>` : ""}
+        ${n.text ? `<p class="news-text">${n.text}</p>` : ""}
       </div>
     </li>`).join("");
 }
