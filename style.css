@@ -1,5 +1,5 @@
 :root {
-  --bg: transparent;
+  --bg: #ffffff;
   --ink: #000000;
   --ink-dim: #8a8a8a;
   --signal: #ffffff;
@@ -51,7 +51,7 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--ink-dim);
-  opacity: 0.05;
+  opacity: 0.0;
   transition: opacity 2.6s ease, color 2.6s ease;
 }
 
@@ -152,7 +152,7 @@ button:focus-visible {
   justify-content: space-between;
   padding: 0 1.5rem;
   border-bottom: 1px solid var(--line);
-  background: var(--bg);
+  /* background: var(--bg); */
 }
 
 .site-header .mark {
@@ -338,7 +338,7 @@ button:focus-visible {
   max-width: 760px;
   margin: 0;
   padding: 2.5rem 1.5rem;
-  background: var(--bg);
+  /* background: var(--bg); */
   border-top: 1px solid var(--line);
 }
 
@@ -527,7 +527,7 @@ button:focus-visible {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   filter: grayscale(1) contrast(1.05);
-  background: #111;
+  /* background: #111; */
 }
 
 .photo figcaption {
@@ -567,7 +567,7 @@ button:focus-visible {
   z-index: 1;
   text-align: center;
   padding: 2rem 1rem;
-  background: var(--bg);
+  /* background: var(--bg); */
 }
 
 .footer-links {
