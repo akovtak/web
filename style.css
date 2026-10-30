@@ -11,7 +11,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-.side-nav a { color: #d9d9d9; transition: color 0.15s ease; }
+.side-nav a { color: #BFBFBF; transition: color 0.15s ease; }
 .side-nav a:hover,
 .side-nav a:focus-visible,
 .side-nav a.active { color: #fff; }
@@ -414,7 +414,7 @@ button:focus-visible {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.8rem
+  gap: 1.5rem
 }
 
 .work-item {
