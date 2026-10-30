@@ -58,7 +58,7 @@ body {
 .ascii-field .cell.active {
   color: var(--ink);
   opacity: 1;
-  transition: opacity 1.12s ease, color 1.12s ease;
+  transition: opacity 0.1s ease, color 0.1s ease;
 }
 
 .scanlines {
@@ -378,19 +378,20 @@ button:focus-visible {
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 0.4rem
 }
 
 .work-item {
-  border-bottom: 1px solid var(--line);
+  border-bottom: none;
 }
 
 .work-item a {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 0.35rem 1.25rem;
-  padding: 0.7rem 0;
+  padding: 0;
   transition: color 0.15s ease, padding-left 0.15s ease;
 }
 
