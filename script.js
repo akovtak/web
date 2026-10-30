@@ -70,17 +70,17 @@ function excite(index) {
   cell.el.textContent = randomChar();
   cell.el.classList.add('active');
 
-  cell.timers.push(setTimeout(() => { cell.el.textContent = randomChar(); }, 45));
-  cell.timers.push(setTimeout(() => { cell.el.textContent = randomChar(); }, 95));
+  cell.timers.push(setTimeout(() => { cell.el.textContent = randomChar(); }, 25));
+  cell.timers.push(setTimeout(() => { cell.el.textContent = randomChar(); }, 25));
   cell.timers.push(setTimeout(() => {
     cell.el.classList.remove('active');
-  }, 160 + Math.random() * 220));
+  }, 120 + Math.random() * 120));
 }
 
 function excitePointer(clientX, clientY) {
   const col = Math.floor(clientX / CELL);
   const row = Math.floor(clientY / CELL);
-  const radius = 2;
+  const radius = 1;
 
   for (let dy = -radius; dy <= radius; dy++) {
     for (let dx = -radius; dx <= radius; dx++) {
