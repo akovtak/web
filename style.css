@@ -414,9 +414,6 @@ button:focus-visible {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
 }
 
 .work-item {
@@ -451,6 +448,8 @@ button:focus-visible {
   font-size: 0.72rem;
   color: var(--ink-dim);
 }
+
+.work-item + .work-item { margin-top: 0.6rem;}
 
 /* events */
 
