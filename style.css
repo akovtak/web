@@ -621,7 +621,7 @@ button:focus-visible {
 }
 
 .footer-links a {
-  color: var(--ink-dim);
+  color: var(--ink);
   transition: color 0.15s ease;
 }
 
