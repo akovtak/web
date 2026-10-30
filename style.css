@@ -418,6 +418,7 @@ button:focus-visible {
 
 .work-item {
   border-bottom: none;
+  padding: 0.25rem 0;
 }
 
 .work-item a {
@@ -448,8 +449,6 @@ button:focus-visible {
   font-size: 0.72rem;
   color: var(--ink-dim);
 }
-
-.work-item + .work-item { margin-top: 0.6rem;}
 
 /* events */
 
