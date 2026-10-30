@@ -600,3 +600,6 @@ button:focus-visible {
   font-size: 0.68rem;
   color: var(--ink-dim);
 }
+
+.ascii-field { pointer-events: none; }
+.side-nav { position: fixed; z-index: 5; }
