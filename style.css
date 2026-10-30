@@ -655,3 +655,5 @@ button:focus-visible {
 
 .ascii-field { pointer-events: none; }
 .side-nav { position: fixed; z-index: 5; }
+
+.scanlines { display: none; }
