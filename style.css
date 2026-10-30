@@ -351,7 +351,7 @@ button:focus-visible {
   font-size: 0.68rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--ink-dim);
+  color: var(--ink);
   margin: 0 0 1rem;
 }
 
@@ -361,7 +361,7 @@ button:focus-visible {
   margin: 0.85rem 0 0;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--ink-dim);
+  color: var(--ink);
 }
 
 /* about */
@@ -436,7 +436,7 @@ button:focus-visible {
 .events-empty {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--ink-dim);
+  color: var(--ink);
   font-style: italic;
   margin: 0;
 }
@@ -481,7 +481,7 @@ button:focus-visible {
   font-family: var(--font-mono);
   font-weight: 400;
   font-size: 0.7rem;
-  color: var(--ink-dim);
+  color: var(--ink);
 }
 
 .events-list {
@@ -496,7 +496,7 @@ button:focus-visible {
 .events-list li {
   font-family: var(--font-body);
   font-size: 0.8rem;
-  color: var(--ink-dim);
+  color: var(--ink);
   display: flex;
   gap: 0.7rem;
 }
@@ -518,7 +518,7 @@ button:focus-visible {
 }
 
 .photo {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .photo img {
