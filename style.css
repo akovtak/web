@@ -94,7 +94,7 @@ body {
 .ascii-field .cell.active {
   color: var(--ink);
   opacity: 1;
-  transition: opacity 0.1s ease, color 0.1s ease;
+  transition: opacity 0.01s ease, color 0.01s ease;
 }
 
 .scanlines {
@@ -109,7 +109,7 @@ body {
     transparent 1px,
     transparent 3px
   );
-  mix-blend-mode: overlay;
+  /* mix-blend-mode: overlay; */
 }
 
 .vignette {
