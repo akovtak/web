@@ -119,17 +119,14 @@ const CONTENT = {
 function renderProjects() {
   const list = document.getElementById("projectsList");
   if (!list) return;
-  list.innerHTML = CONTENT.projects
-    .map(
-      (p) => `
-      <li class="work-item">
-        <a href="#">
-          <span class="work-title">${p.title}</span>
-          <span class="work-meta">${p.meta}</span>
-        </a>
-      </li>`
-    )
-    .join("");
+  list.innerHTML = CONTENT.projects.map((p) => `
+    <li class="work-item">
+      <a ${p.link ? `href="${p.link}" target="_blank" rel="noopener"` : ""}>
+        <span class="work-title">${p.title}</span>
+        <span class="work-meta">${p.meta}</span>
+      </a>
+      ${p.youtube ? `<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${p.youtube}" title="${p.title}" loading="lazy" allowfullscreen></iframe></div>` : ""}
+    </li>`).join("");
 }
 
 function renderEvents() {
@@ -178,19 +175,19 @@ function renderPhotos() {
     .join("");
 }
 
-function renderNews() {
-  const list = document.getElementById("newsList");
-  if (!list) return;
-  const limit = Number(list.dataset.limit) || CONTENT.news.length;
-  list.innerHTML = CONTENT.news.slice(0, limit).map((n) => `
-    <li class="news-item">
-      <span class="news-date">${n.date}</span>
-      <div>
-        <p class="news-title">${n.link ? `<a href="${n.link}" target="_blank" rel="noopener">${n.title}</a>` : n.title}</p>
-        ${n.text ? `<p class="news-text">${n.text}</p>` : ""}
-      </div>
-    </li>`).join("");
-}
+// function renderNews() {
+//   const list = document.getElementById("newsList");
+//   if (!list) return;
+//   const limit = Number(list.dataset.limit) || CONTENT.news.length;
+//   list.innerHTML = CONTENT.news.slice(0, limit).map((n) => `
+//     <li class="news-item">
+//       <span class="news-date">${n.date}</span>
+//       <div>
+//         <p class="news-title">${n.link ? `<a href="${n.link}" target="_blank" rel="noopener">${n.title}</a>` : n.title}</p>
+//         ${n.text ? `<p class="news-text">${n.text}</p>` : ""}
+//       </div>
+//     </li>`).join("");
+// }
 
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
