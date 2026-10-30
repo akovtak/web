@@ -77,16 +77,12 @@ function excite(index) {
   }, 120 + Math.random() * 120));
 }
 
-function excitePointer(clientX, clientY) {
-  const col = Math.floor(clientX / CELL);
-  const row = Math.floor(clientY / CELL);
-  const radius = 1;
 
+function exciteCell(col, row, radius = 1) {
   for (let dy = -radius; dy <= radius; dy++) {
     for (let dx = -radius; dx <= radius; dx++) {
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist > radius) continue;
-      // sparser the further from center, so the trail doesn't feel like a solid block
       if (dist > 0 && Math.random() < dist / (radius + 0.6)) continue;
 
       const c = col + dx;
@@ -97,18 +93,39 @@ function excitePointer(clientX, clientY) {
   }
 }
 
+let prevCol = null;
+let prevRow = null;
+let queued = null;
 let ticking = false;
-let lastEvent = null;
 
 function onPointerMove(e) {
-  lastEvent = e;
+  queued = e;
   if (ticking) return;
   ticking = true;
   requestAnimationFrame(() => {
-    if (lastEvent) excitePointer(lastEvent.clientX, lastEvent.clientY);
     ticking = false;
+    if (!queued) return;
+
+    const col = Math.floor(queued.clientX / CELL);
+    const row = Math.floor(queued.clientY / CELL);
+    if (prevCol === null) { prevCol = col; prevRow = row; }
+
+    // walk from the previous position to the new one, lighting every cell on the way
+    const steps = Math.max(Math.abs(col - prevCol), Math.abs(row - prevRow), 1);
+    for (let i = 1; i <= steps; i++) {
+      const c = Math.round(prevCol + ((col - prevCol) * i) / steps);
+      const r = Math.round(prevRow + ((row - prevRow) * i) / steps);
+      exciteCell(c, r, i === steps ? 1 : 0.5);   // full radius at the cursor, thin line behind it
+    }
+
+    prevCol = col;
+    prevRow = row;
+    queued = null;
   });
 }
+
+// don't draw a line from the old spot when the cursor re-enters the window
+document.documentElement.addEventListener('mouseleave', () => { prevCol = null; prevRow = null; });
 
 if (!prefersReducedMotion) {
   window.addEventListener('pointermove', onPointerMove);
